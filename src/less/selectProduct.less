@@ -1,0 +1,205 @@
+.select_product{
+    padding: 30px 0;
+    .header_product{
+        min-width: 0;
+        display: flex;
+        padding-bottom:50px ;
+        .left_bar{
+            width: 60%;
+            .product_photo{
+                height: 500px;
+                width: 85%;
+                position: relative;
+                padding-right: 20px;
+                box-sizing: border-box;
+                .image_dublicate_box{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 70px;
+                    z-index: 2;
+                    .image_dublicate_wrapper{
+                        justify-content: space-around;
+                        .photo_dublicate{
+                            height: 54px !important;
+                            width: 54px !important;
+                            &:hover{
+                                border:1px solid #eee;
+                                border-radius: 3px;
+                                padding: 1px;
+                                cursor: pointer;
+                            }
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .image_box{
+                    position: absolute;
+                    left: 70px;
+                    top: 0%;
+                    width: 100%;
+                    height: 100%;
+
+                    .image_wrapper{
+
+                        .photo_image_box{
+                            width: 100%;
+                            height: 100%;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right_bar{
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+            width: 40%;
+            padding: 20px;
+            .name_product{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 34px;
+            }
+            .colum_wrap{
+                display: flex;
+                padding: 20px 0;
+                .colum_left{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 50%;
+                    .product_available{
+                        font-weight: 500;
+                        padding-bottom: 25px;
+                        padding-top: 10px;
+                    }
+                    .old_price{
+                        font-size: 16px;
+                        position: relative;
+                        text-decoration: line-through;
+                        color: rgba(0, 0, 0,0.4);
+                        padding-bottom: 5px;
+                        // &::after{
+                        //     content: "";
+                        //     position: absolute;
+                        //     background-color: #000;
+                        //     height: 2px;
+                        //     width: 100%;
+                        //     top: 8px;
+                        //     left: 0;
+                        //     transform: rotate(-30deg);
+                        // }
+                    }
+                    .new_price{
+                        font-size: 20px;
+                        padding-bottom: 20px;
+                    }
+                    a{
+                        padding: 15px 60px;
+                        background-color:rgba(16,16,16,0.8);
+                        color: #fff;
+                        border-radius: 3px;
+                        user-select: none;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover{
+                            transition: all 0.3s ease;
+                            background-color: #000;
+                        }
+                        .fas{
+                            width: 25px;
+                        }
+                    }
+                }
+                .colum_right{
+                    width: 50%;
+                    .accordion{
+                        max-width: 500px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-bottom: 1px solid rgba(16,16,16,0.4);
+                        // background-color: rgba(0, 0, 0, 0.01);
+                        // padding: 10px;
+
+                        transition: all 0.3s ease;
+                        &.openAccordion{
+                            .accordion_message{
+                                max-height: 15em;
+                            }
+                            .fas{
+                                &.fa-chevron-right{
+                                    transition: all 0.3s ease;
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                        h3{
+                            cursor: pointer;
+                            padding: 10px 0;
+                            font-weight: 500;
+
+                            .fas {
+                                width: 25px;
+                                font-size: 16px;
+                                &.fa-chevron-right{
+                                    width: 30px;
+                                    text-align: center;
+                                    font-size: 14px;
+                                }
+                            }
+                            .fab{
+                                width: 25px;
+                                font-size: 16px;
+                            }
+                        }
+                        .accordion_message{
+                            padding: 0;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: 0.3s ease all;
+                            
+                            ul{
+                                padding: 10px 12px;
+                                li{
+                                    list-style-type: disc;
+                                    list-style-position: inside;
+                                    padding: 5px 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .footer_product{
+        padding: 20px 0;
+        
+        .title_footer_product{
+            display: inline-block;
+            padding: 10px 0;
+            h4{
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        .descrip{
+            ul{
+                li{
+                    padding: 3px 0;
+                    list-style-type: disc;
+                    list-style-position: inside;
+                }
+            }
+        }
+    }
+}
